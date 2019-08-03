@@ -1,5 +1,5 @@
 # version of uwsgi : 2.0.18
-#  export VERSION=v2 && docker run  -dit -p 10204:22 -v /mnt/jd/t/ana:/mnt/jd/t/ana -v /mnt/jd/t/vt:/root/jd/t  --name ${VERSION}_5 -h ${VERSION}_5 ub_sshd:$VERSION
+# export VERSION=v0 && docker run  -dit -p 10204:22 -p 10205:10205 -v /mnt/jd/t/ana:/mnt/jd/t/ana -v /mnt/jd/t/vt:/root/jd/t  --name ${VERSION}_5 -h ${VERSION}_5 ub_ssh_uwsgi_http:$VERSION
 # sudo ln -s /lib/x86_64-linux-gnu/libpcre.so.3.13.2 /lib/x86_64-linux-gnu/libpcre.so.1
 # sudo apt install g++
 # sudo apt install make 
