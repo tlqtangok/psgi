@@ -1,3 +1,4 @@
+# version of uwsgi : 2.0.18
 #  export VERSION=v2 && docker run  -dit -p 10204:22 -v /mnt/jd/t/ana:/mnt/jd/t/ana -v /mnt/jd/t/vt:/root/jd/t  --name ${VERSION}_5 -h ${VERSION}_5 ub_sshd:$VERSION
 # sudo ln -s /lib/x86_64-linux-gnu/libpcre.so.3.13.2 /lib/x86_64-linux-gnu/libpcre.so.1
 # sudo apt install g++
@@ -13,7 +14,7 @@ curl http://uwsgi.it/install | bash -s psgi `pwd`/uwsgi
 # ./uwsgi --ini myapp.pl
 
 # or just use start_http_server.PL
-# perl start_http_server.PL 
+# perl start_http_server.PL  start
 
 
 #bld_uwsgi.sh
