@@ -3,11 +3,68 @@ use FindBin qw($Bin);
 use threads;
 use feature qw(say);
 use POSIX qw(assert); 
+use File::Basename;
 
 &main(); 
 
 sub main()
 {
+	my $ff = "perl $ENV{perl_p}/ff.PL "; 
+	my $script_basename = basename $0; 
+
+	my $script_root = $Bin; 
+	say $script_root;
+
+	if (@ARGV == 0)
+	{
+		die "- please input arg, arg num is 0 , arg should be one of { start, stop, restart }\n";
+		exit(3); 
+	}
+
+	if ( @ARGV == 1 && $ARGV[0] eq "stop" || $ARGV[0] eq "restart" || $ARGV[0] eq  "start")
+	{
+		# wait for process	
+	}
+	else
+	{
+		die "- please input 1 arg , must be one of { start, stop, restart }\n";
+		exit(1); 
+	}
+
+	if ($ARGV[0] eq "stop")
+	{
+		say "- to stop those process "; 
+		system(qq{pgrep -al uwsgi}); 
+		say ""; 
+		system(qq{pgrep -al uwsgi|$ff 0|xargs kill -9}); 
+		exit(0);
+	}
+
+	if ($ARGV[0] eq "restart")
+	{
+		system("perl $script_root/$script_basename stop");
+		# then run start entry
+		&run_with_arg_start(); 
+		exit(0); 
+	}
+
+
+
+	if ($ARGV[0] eq "start")
+	{
+		&run_with_arg_start(); 
+		exit (0);
+	} # end start
+}
+
+
+sub run_with_arg_start()
+{
+	if (`pgrep -al uwsgi` ne "")
+	{
+		say "- already has process uwsgi"; 
+		exit(2)	; 
+	}
 	my $script_root = $Bin; 
 	say $script_root;
 
@@ -38,4 +95,6 @@ sub main()
 	my $map_ = "perl $ENV{perl_p}/map_.PL "; 
 	my $port_with_colon = qx{cat $fn_myapp_ini|grep http | $map_ 's/http...//'};
 	die "- http server on $port_with_colon is not start, please check !\n" if (`netstat -aonp |grep $port_with_colon` eq "");
+
+	system( qq {pgrep -al uwsgi} );
 }
