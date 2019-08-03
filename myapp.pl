@@ -42,11 +42,13 @@ sub routine_not_file($path_rel)
 	tmi2.cgi
 	); 
 
-	my $curdir = cwd(); 	
+	my $curdir = cwd(); 
+	#say $curdir. $path_rel; 	
+	#say `ls -thl ${curdir}${path_rel}`;
 
-	if (-d $curdir . $path_rel && length $path_rel >= 3) # show dir content 
+	if (-d "$curdir$path_rel") # show dir content 
 	{
-		my $fc = `ls -thl $path_rel`;
+		my $fc = `ls -thl $curdir$path_rel`;
 		$ret_str = "<html><pre>$fc</pre></html>"; 
 =pod
 my $ret_str =<<END
