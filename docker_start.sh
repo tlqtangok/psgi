@@ -8,7 +8,12 @@ echo "- successfully start this container"
 #/usr/sbin/sshd -D -e -f /etc/ssh/sshd_config
 
 echo "- start http server on 10205"
-/bin/bash -c 'source /root/.bashrc && echo $perl_p &&  perl /root/jd/t0/start_http_server.PL start &'
+perl /root/jd/t0/start_http_server.PL start &
+echo "- end http server"
 
+echo "- start ssh server "
 service ssh start &
+echo "- end ssh server "
+
+echo "- start bash daemon ..."
 /bin/bash
