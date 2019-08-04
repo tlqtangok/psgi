@@ -35,20 +35,25 @@ END
 sub routine_not_file($path_rel)
 {
 	my $path_rel = shift;
-    my $ret_str = ""; 
+	my $ret_str = ""; 
+	my $map_ = "perl $ENV{perl_p}/map_.PL "; 
+	my $fn_myapp_ini = "myapp.ini"; 
+	my $folder_html_root = qx{cat $fn_myapp_ini | grep check-static |$map_ 's/check.static...//'}; 
+	chomp($folder_html_root);
 
 	my @module_name = qw(
 	tmi.cgi
 	tmi2.cgi
 	); 
 
-	my $curdir = cwd(); 
+	#my $curdir = cwd(); 
+
 	#say $curdir. $path_rel; 	
 	#say `ls -thl ${curdir}${path_rel}`;
 
-	if (-d "$curdir$path_rel") # show dir content 
+	if (-d "$folder_html_root$path_rel") # show dir content 
 	{
-		my $fc = `ls -thl $curdir$path_rel`;
+		my $fc = `ls -thl $folder_html_root$path_rel`;
 		$ret_str = "<html><pre>$fc</pre></html>"; 
 =pod
 my $ret_str =<<END

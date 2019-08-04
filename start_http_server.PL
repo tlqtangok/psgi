@@ -69,6 +69,14 @@ sub run_with_arg_start()
 	say $script_root;
 
 	chdir ($script_root);
+
+	my $fn_myapp_ini = "myapp.ini"; 
+	my $map_ = "perl $ENV{perl_p}/map_.PL "; 
+        my $folder_html_root = qx{cat $fn_myapp_ini | grep check-static |$map_ 's/check.static...//'};
+        chomp($folder_html_root);
+	`mkdir -p $folder_html_root`;
+	say "- html root is $folder_html_root"; 
+
 	my $fn_libpcre_so = "./lib/libpcre.so.1"; 
 	die "- not exist $fn_libpcre_so\n"  if ! -e $fn_libpcre_so;
 
@@ -92,7 +100,6 @@ sub run_with_arg_start()
 	sleep 2; 
 
 	my $fn_myapp_ini = "$script_root/myapp.ini";
-	my $map_ = "perl $ENV{perl_p}/map_.PL "; 
 	my $port_with_colon = qx{cat $fn_myapp_ini|grep http | $map_ 's/http...//'};
 	chomp($port_with_colon); 
 	die "- http server on $port_with_colon is not start, please check !\n" if (`netstat -aonp |grep $port_with_colon` eq "");
