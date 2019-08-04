@@ -9,11 +9,11 @@ use File::Basename;
 
 sub main()
 {
-	my $ff = "perl $ENV{perl_p}/ff.PL "; 
 	my $script_basename = basename $0; 
 
 	my $script_root = $Bin; 
 	say $script_root;
+	my $ff = "perl $script_root/lib/ff.PL "; 
 
 	if (@ARGV == 0)
 	{
@@ -71,7 +71,7 @@ sub run_with_arg_start()
 	chdir ($script_root);
 
 	my $fn_myapp_ini = "myapp.ini"; 
-	my $map_ = "perl $ENV{perl_p}/map_.PL "; 
+	my $map_ = "perl $script_root/lib/map_.PL "; 
         my $folder_html_root = qx{cat $fn_myapp_ini | grep check-static |$map_ 's/check.static...//'};
         chomp($folder_html_root);
 	`mkdir -p $folder_html_root`;

@@ -36,7 +36,9 @@ sub routine_not_file($path_rel)
 {
 	my $path_rel = shift;
 	my $ret_str = ""; 
-	my $map_ = "perl $ENV{perl_p}/map_.PL "; 
+	my $script_root = cwd(); 
+
+	my $map_ = "perl $script_root/lib/map_.PL "; 
 	my $fn_myapp_ini = "myapp.ini"; 
 	my $folder_html_root = qx{cat $fn_myapp_ini | grep check-static |$map_ 's/check.static...//'}; 
 	chomp($folder_html_root);
