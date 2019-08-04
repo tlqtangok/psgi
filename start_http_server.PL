@@ -94,6 +94,7 @@ sub run_with_arg_start()
 	my $fn_myapp_ini = "$script_root/myapp.ini";
 	my $map_ = "perl $ENV{perl_p}/map_.PL "; 
 	my $port_with_colon = qx{cat $fn_myapp_ini|grep http | $map_ 's/http...//'};
+	chomp($port_with_colon); 
 	die "- http server on $port_with_colon is not start, please check !\n" if (`netstat -aonp |grep $port_with_colon` eq "");
 
 	system( qq {pgrep -al uwsgi} );
