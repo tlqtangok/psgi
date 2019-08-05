@@ -1,232 +1,26 @@
-*** Starting uWSGI 2.0.18 (64bit) on [Sat Aug  3 12:40:15 2019] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Aug  5 20:02:53 2019] ***
 compiled with version: 7.4.0 on 03 August 2019 09:25:01
 os: Linux-4.4.0-65-generic #86-Ubuntu SMP Thu Feb 23 17:49:58 UTC 2017
-nodename: v2_5
+nodename: v4_0
 machine: x86_64
 clock source: unix
 pcre jit disabled
 detected number of CPU cores: 40
-current working directory: /root/jd/t0
-detected binary path: /root/jd/t0/uwsgi
+current working directory: /root/jd/psgi
+detected binary path: /root/jd/psgi/uwsgi
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /root/jd/t0
+chdir() to /root/jd/psgi
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 building mime-types dictionary from file /etc/mime.types...554 entry found
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
 uWSGI http bound on :10205 fd 4
-uwsgi socket 0 bound to TCP address 127.0.0.1:46248 (port auto-assigned) fd 3
+uwsgi socket 0 bound to TCP address 127.0.0.1:44252 (port auto-assigned) fd 3
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-initialized Perl 5.26.1 main interpreter at 0x5588a7f19d50
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-your server socket listen backlog is limited to 100 connections
-your mercy for graceful operations on workers is 60 seconds
-mapped 607584 bytes (593 KB) for 8 cores
-*** Operational MODE: preforking+threaded ***
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-PSGI app 0 (myapp.pl) loaded in 0 seconds at 0x5588a80d7450 (interpreter 0x5588a7f19d50)
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-*** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 11479)
-spawned uWSGI worker 1 (pid: 11480, cores: 4)
-spawned uWSGI worker 2 (pid: 11481, cores: 4)
-*** Stats server enabled on :10206 fd: 14 ***
-spawned uWSGI http 1 (pid: 11484)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g'
-        };
-
-[pid: 11481|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:40:46 2019] GET /xxxx.g => generated 40 bytes in 7 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 1)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'NULL CONTENT',
-          'REQUEST_METHOD' => 'GET',
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g'
-        };
-
-[pid: 11481|app: 0|req: 2/2] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:40:47 2019] GET /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 2)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 11481|app: 0|req: 3/3] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:40:50 2019] GET /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 3)
-/root/jd/t0
-
-$VAR1 = {
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g',
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT'
-        };
-
-[pid: 11481|app: 0|req: 4/4] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:40:51 2019] GET /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 1)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g'
-        };
-
-[pid: 11480|app: 0|req: 1/5] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:40:53 2019] GET /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 1)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 11480|app: 0|req: 2/6] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:40:56 2019] GET /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 0)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 11480|app: 0|req: 3/7] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:41:04 2019] GET /xxxx.g => generated 40 bytes in 7 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 3)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'NULL CONTENTxxxx',
-          'REQUEST_METHOD' => 'POST',
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 11481|app: 0|req: 5/8] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:18 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 2)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'NULL CONTENTxxxx',
-          'REQUEST_METHOD' => 'POST',
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 11480|app: 0|req: 4/9] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:23 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 2)
-/root/jd/t0
-
-$VAR1 = {
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => '',
-          'POST_CONTENT' => 'NULL CONTENTxxxx',
-          'REQUEST_METHOD' => 'POST'
-        };
-
-[pid: 11481|app: 0|req: 6/10] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:33 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 1)
-/root/jd/t0
-
-$VAR1 = {
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g',
-          'REQUEST_METHOD' => 'POST',
-          'POST_CONTENT' => 'NULL CONTENTxxxx'
-        };
-
-[pid: 11481|app: 0|req: 7/11] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:34 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 3)
-/root/jd/t0
-
-$VAR1 = {
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => '',
-          'REQUEST_METHOD' => 'POST',
-          'POST_CONTENT' => 'NULL CONTENTxxxx'
-        };
-
-[pid: 11481|app: 0|req: 8/12] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:34 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 2)
-/root/jd/t0
-
-$VAR1 = {
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g',
-          'POST_CONTENT' => 'NULL CONTENTxxxx',
-          'REQUEST_METHOD' => 'POST'
-        };
-
-[pid: 11481|app: 0|req: 9/13] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:35 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 1)
-/root/jd/t0
-
-$VAR1 = {
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g',
-          'POST_CONTENT' => 'NULL CONTENTxxxx',
-          'REQUEST_METHOD' => 'POST'
-        };
-
-[pid: 11481|app: 0|req: 10/14] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:35 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 3)
-/root/jd/t0
-
-$VAR1 = {
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g',
-          'POST_CONTENT' => 'NULL CONTENTxxxx',
-          'REQUEST_METHOD' => 'POST'
-        };
-
-[pid: 11481|app: 0|req: 11/15] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:41:36 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 2)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'NULL CONTENTxxxx',
-          'REQUEST_METHOD' => 'POST',
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 11480|app: 0|req: 5/16] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:42:42 2019] POST /xxxx.g => generated 40 bytes in 7 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 0)
-*** Starting uWSGI 2.0.18 (64bit) on [Sat Aug  3 12:43:09 2019] ***
-compiled with version: 7.4.0 on 03 August 2019 09:25:01
-os: Linux-4.4.0-65-generic #86-Ubuntu SMP Thu Feb 23 17:49:58 UTC 2017
-nodename: v2_5
-machine: x86_64
-clock source: unix
-pcre jit disabled
-detected number of CPU cores: 40
-current working directory: /root/jd/t0
-detected binary path: /root/jd/t0/uwsgi
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /root/jd/t0
-your memory page size is 4096 bytes
-detected max file descriptor number: 1024
-building mime-types dictionary from file /etc/mime.types...554 entry found
-lock engine: pthread robust mutexes
-thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on :10205 fd 4
-uwsgi socket 0 bound to TCP address 127.0.0.1:46433 (port auto-assigned) fd 3
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-initialized Perl 5.26.1 main interpreter at 0x55f094951d50
+initialized Perl 5.26.1 main interpreter at 0x55b5f57c1f40
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 your server socket listen backlog is limited to 100 connections
@@ -234,211 +28,37 @@ your mercy for graceful operations on workers is 60 seconds
 mapped 607584 bytes (593 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
 Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
+Smartmatch is experimental at /root/jd/psgi/myapp.pl line 82.
+Can't locate Devel/StackTrace.pm in @INC (you may need to install the Devel::StackTrace module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl) at (eval 16) line 1.
+BEGIN failed--compilation aborted at (eval 16) line 1.
 Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
+Smartmatch is experimental at /root/jd/psgi/myapp.pl line 82.
+Can't locate Devel/StackTrace.pm in @INC (you may need to install the Devel::StackTrace module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl) at (eval 16) line 1.
+BEGIN failed--compilation aborted at (eval 16) line 1.
 Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
+Smartmatch is experimental at /root/jd/psgi/myapp.pl line 82.
+Can't locate Devel/StackTrace.pm in @INC (you may need to install the Devel::StackTrace module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl) at (eval 16) line 1.
+BEGIN failed--compilation aborted at (eval 16) line 1.
 Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-PSGI app 0 (myapp.pl) loaded in 0 seconds at 0x55f094ba8890 (interpreter 0x55f094951d50)
+Smartmatch is experimental at /root/jd/psgi/myapp.pl line 82.
+Can't locate Devel/StackTrace.pm in @INC (you may need to install the Devel::StackTrace module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl) at (eval 16) line 1.
+BEGIN failed--compilation aborted at (eval 16) line 1.
+PSGI app 0 (myapp.pl) loaded in 1 seconds at 0x55b5f5a18920 (interpreter 0x55b5f57c1f40)
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 11588)
-spawned uWSGI worker 1 (pid: 11589, cores: 4)
-spawned uWSGI worker 2 (pid: 11590, cores: 4)
+spawned uWSGI master process (pid: 246)
+spawned uWSGI worker 1 (pid: 247, cores: 4)
+spawned uWSGI worker 2 (pid: 248, cores: 4)
 *** Stats server enabled on :10206 fd: 14 ***
-spawned uWSGI http 1 (pid: 11593)
-*** Starting uWSGI 2.0.18 (64bit) on [Sat Aug  3 12:43:55 2019] ***
-compiled with version: 7.4.0 on 03 August 2019 09:25:01
-os: Linux-4.4.0-65-generic #86-Ubuntu SMP Thu Feb 23 17:49:58 UTC 2017
-nodename: v2_5
-machine: x86_64
-clock source: unix
-pcre jit disabled
-detected number of CPU cores: 40
-current working directory: /root/jd/t0
-detected binary path: /root/jd/t0/uwsgi
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /root/jd/t0
-your memory page size is 4096 bytes
-detected max file descriptor number: 1024
-building mime-types dictionary from file /etc/mime.types...554 entry found
-lock engine: pthread robust mutexes
-thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on :10205 fd 4
-uwsgi socket 0 bound to TCP address 127.0.0.1:40317 (port auto-assigned) fd 3
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-initialized Perl 5.26.1 main interpreter at 0x55b07d484f00
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-your server socket listen backlog is limited to 100 connections
-your mercy for graceful operations on workers is 60 seconds
-mapped 607584 bytes (593 KB) for 8 cores
-*** Operational MODE: preforking+threaded ***
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-PSGI app 0 (myapp.pl) loaded in 0 seconds at 0x55b07d6dc3e0 (interpreter 0x55b07d484f00)
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-*** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 11619)
-spawned uWSGI worker 1 (pid: 11620, cores: 4)
-spawned uWSGI worker 2 (pid: 11621, cores: 4)
-*** Stats server enabled on :10206 fd: 14 ***
-spawned uWSGI http 1 (pid: 11624)
-/root/jd/t0
+spawned uWSGI http 1 (pid: 250)
+/root/jd/psgi
 
 $VAR1 = {
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => '',
-          'REQUEST_METHOD' => 'POST',
-          'POST_CONTENT' => 'xxxx'
-        };
-
-[pid: 11621|app: 0|req: 1/1] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:44:14 2019] POST /xxxx.g => generated 40 bytes in 7 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 0)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'postinfo',
           'REQUEST_METHOD' => 'POST',
           'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.g'
+          'POST_CONTENT' => 'xxxx',
+          'PATH_INFO' => '/'
         };
 
-[pid: 11621|app: 0|req: 2/2] 127.0.0.1 () {32 vars in 369 bytes} [Sat Aug  3 12:44:33 2019] POST /xxxx.g => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 1)
-/root/jd/t0
-
-$VAR1 = {
-          'PATH_INFO' => '/xxxx.g',
-          'QUERY_STRING' => 'xx=xxx?xxx',
-          'REQUEST_METHOD' => 'POST',
-          'POST_CONTENT' => 'postinfo'
-        };
-
-[pid: 11620|app: 0|req: 1/3] 127.0.0.1 () {32 vars in 390 bytes} [Sat Aug  3 12:44:58 2019] POST /xxxx.g?xx=xxx?xxx => generated 40 bytes in 7 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 0)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'POST',
-          'QUERY_STRING' => 'xx=xxx_xxx_xx_xxx_xx',
-          'PATH_INFO' => '/xxxx.g',
-          'POST_CONTENT' => 'postinfo'
-        };
-
-[pid: 11621|app: 0|req: 3/4] 127.0.0.1 () {32 vars in 410 bytes} [Sat Aug  3 12:45:11 2019] POST /xxxx.g?xx=xxx_xxx_xx_xxx_xx => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 2)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'postinfo',
-          'REQUEST_METHOD' => 'POST',
-          'QUERY_STRING' => 'xxxxx_xxx_xx_xxx_xx',
-          'PATH_INFO' => '/xxxx.g'
-        };
-
-[pid: 11620|app: 0|req: 2/5] 127.0.0.1 () {32 vars in 408 bytes} [Sat Aug  3 12:45:19 2019] POST /xxxx.g?xxxxx_xxx_xx_xxx_xx => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 3)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'postinfo',
-          'REQUEST_METHOD' => 'POST',
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxx.gxxxxx_xxx_xx_xxx_xx'
-        };
-
-[pid: 11621|app: 0|req: 4/6] 127.0.0.1 () {32 vars in 407 bytes} [Sat Aug  3 12:45:23 2019] POST /xxxx.gxxxxx_xxx_xx_xxx_xx => generated 59 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 3)
-/root/jd/t0
-
-$VAR1 = {
-          'POST_CONTENT' => 'postinfo',
-          'QUERY_STRING' => 'xxxxx_xxx_xx_xxx_xx',
-          'PATH_INFO' => '/xxxx.g',
-          'REQUEST_METHOD' => 'POST'
-        };
-
-[pid: 11621|app: 0|req: 5/7] 127.0.0.1 () {32 vars in 408 bytes} [Sat Aug  3 12:45:29 2019] POST /xxxx.g?xxxxx_xxx_xx_xxx_xx => generated 40 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 0)
-*** Starting uWSGI 2.0.18 (64bit) on [Sat Aug  3 12:53:26 2019] ***
-compiled with version: 7.4.0 on 03 August 2019 09:25:01
-os: Linux-4.4.0-65-generic #86-Ubuntu SMP Thu Feb 23 17:49:58 UTC 2017
-nodename: v2_5
-machine: x86_64
-clock source: unix
-pcre jit disabled
-detected number of CPU cores: 40
-current working directory: /root/jd/t0
-detected binary path: /root/jd/t0/uwsgi
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-chdir() to /root/jd/t0
-your memory page size is 4096 bytes
-detected max file descriptor number: 1048576
-building mime-types dictionary from file /etc/mime.types...554 entry found
-lock engine: pthread robust mutexes
-thunder lock: disabled (you can enable it with --thunder-lock)
-uWSGI http bound on :10205 fd 4
-uwsgi socket 0 bound to TCP address 127.0.0.1:43758 (port auto-assigned) fd 3
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-initialized Perl 5.26.1 main interpreter at 0x556284d2d5e0
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-your server socket listen backlog is limited to 100 connections
-your mercy for graceful operations on workers is 60 seconds
-mapped 607584 bytes (593 KB) for 8 cores
-*** Operational MODE: preforking+threaded ***
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-Plack::Util is not installed, using "do" instead of "load_psgi"
-Smartmatch is experimental at /root/jd/t0/myapp.pl line 73.
-PSGI app 0 (myapp.pl) loaded in 0 seconds at 0x556284f7b368 (interpreter 0x556284d2d5e0)
-uWSGI running as root, you can use --uid/--gid/--chroot options
-*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
-*** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 39)
-spawned uWSGI worker 1 (pid: 40, cores: 4)
-spawned uWSGI worker 2 (pid: 41, cores: 4)
-*** Stats server enabled on :10206 fd: 14 ***
-spawned uWSGI http 1 (pid: 44)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'PATH_INFO' => '/',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 41|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 288 bytes} [Sat Aug  3 12:54:13 2019] GET / => generated 34 bytes in 6 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 0)
-/root/jd/t0
-
-$VAR1 = {
-          'REQUEST_METHOD' => 'GET',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'PATH_INFO' => '/xxxxxx',
-          'QUERY_STRING' => ''
-        };
-
-[pid: 40|app: 0|req: 1/2] 127.0.0.1 () {28 vars in 300 bytes} [Sat Aug  3 12:54:17 2019] GET /xxxxxx => generated 40 bytes in 5 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 1)
-/root/jd/t0
-
-$VAR1 = {
-          'QUERY_STRING' => '',
-          'PATH_INFO' => '/xxxxxxxxxxxxxxyyyyyyy',
-          'POST_CONTENT' => 'NULL CONTENT',
-          'REQUEST_METHOD' => 'GET'
-        };
-
-[pid: 40|app: 0|req: 2/3] 127.0.0.1 () {28 vars in 330 bytes} [Sat Aug  3 12:54:24 2019] GET /xxxxxxxxxxxxxxyyyyyyy => generated 55 bytes in 5 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 2)
+[pid: 248|app: 0|req: 1/1] 127.0.0.1 () {32 vars in 357 bytes} [Mon Aug  5 20:03:11 2019] POST / => generated 160 bytes in 58 msecs (HTTP/1.1 200) 1 headers in 44 bytes (0 switches on core 0)
